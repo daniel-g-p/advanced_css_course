@@ -1,0 +1,17 @@
+GIT REPOSITORY SETUP
+    1. Type "git init" in command line to initiate a repository
+    2. Type "git branch -m [name]" to set the repository name (optional)
+    3. Type "git add ." to stage the initial commit
+    4. Type "git commit -m [message]" to finalize the initial commit
+    5. Create a remote repository on GitHub
+    6. Use instructions to push the local repository to GitHub
+
+BACKGROUNDS
+    - Set two values for the background property to create an overlay effect
+    - The first specified value will be on top
+
+COLORS
+    - Add a number between 00 and 99 to the end of a HEX color to customized its opacity
+
+CLIP PATH
+    - Specify the individual coordinates of the corner points separated by commas
