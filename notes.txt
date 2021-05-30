@@ -15,3 +15,20 @@ COLORS
 
 CLIP PATH
     - Specify the individual coordinates of the corner points separated by commas
+
+CSS ANIMATIONS
+    - Keyframes specify states in % (e.g. 50% => 50% of the animation complete)
+    - Syntax: "animation: duration function delay count direction fill-mode play-state name 
+    - "backface-visibility: hidden" removes bugs in animations and transitions
+    - "animation-fill-mode" sets the styling of animated elements before and after the execution of an animation
+
+VS CODE TOOLS
+    - Highlighting a bit of code and clicking "CTRL + D" will select the next matching element in the code
+
+CASCADE
+    - Author vs User vs Browser Styles may conflict
+    - 1. User !important declarations
+    - 2. Author !important declarations
+    - 3. Author declarations
+    - 4. User declarations
+    - 5. Browser declarations

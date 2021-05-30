@@ -43,12 +43,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading {
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
 .heading-main {
@@ -56,6 +58,8 @@ body {
     display: block;
     font-size: 4.5rem;
     letter-spacing: 0.5em;
+    animation: 0.5s ease-out fadeFromLeft;
+    backface-visibility: hidden;
 }
 
 .heading-sub {
@@ -63,4 +67,100 @@ body {
     display: block;
     font-size: 1.5rem;
     letter-spacing: 0.75em;
+    animation: 0.5s ease-out fadeFromRight;
+    backface-visibility: hidden;
+}
+
+@keyframes fadeFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-48px);
+    }
+    80% {
+        transform: translateX(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(48px);
+    }
+    80% {
+        transform: translateX(-8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button:link,
+.button:visited {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: #fff;
+    color: #777;
+    border-radius: 2em;
+    transition: all 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px #00000050;
+}
+
+.button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px #00000050;
+}
+
+.button-white-fill {
+    background-color: #fff;
+    color: #777;
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.button-white-fill::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.25) scaleY(1.5);
+    opacity: 0;
+}
+
+.button-animated {
+    animation: fadeFromBottom 0.5s ease 0.5s backwards;
 }
