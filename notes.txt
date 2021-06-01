@@ -32,3 +32,23 @@ CASCADE
     - 3. Author declarations
     - 4. User declarations
     - 5. Browser declarations
+
+UNITS
+    - Use "px" over other units where possible as it reduces the computatuions that the browser has to do
+    - Percentages of elements are always relative to the parent's width
+    - Some properties are inherited while others aren't
+    - Inheritance is based on the computed value, not the specified one
+    - Root font size should be set in %
+
+BOX-SIZING
+    - Best set to inherit on the universal selector and then specified in the body element
+
+BEM MODEL
+    - CSS Class naming convention
+    - Syntax: block__element--modifier
+
+SASS
+    - Mixins are reusable pieces of code that can take and output variables
+    - Functions are reusable calculation tools that can use variables to compute them and output them following a formula
+    - Mixins copy the code to the selector, Extends copy the selector to the code
+    - @use brings files into a folder, @forward brings them in to send them back out
