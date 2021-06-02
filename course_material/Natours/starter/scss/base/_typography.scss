@@ -24,3 +24,35 @@ html {
         backface-visibility: hidden;
     }
 }
+
+.heading-secondary {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, $light-green, $dark-green);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-property: letter-spacing, transform, text-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    &:hover {
+        transform: skew(10deg, 2deg) scale(1.1);
+        letter-spacing: 0.05em;
+        text-shadow: 0 0.25em 0.25em #00000025;
+    }
+}
+
+.heading-tertiary {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.paragraph {
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
