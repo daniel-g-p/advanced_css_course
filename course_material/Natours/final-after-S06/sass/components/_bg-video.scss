@@ -7,10 +7,10 @@
     z-index: -1;
     opacity: .15;
     overflow: hidden;
-
     &__content {
         height: 100%;
         width: 100%;
+        // Fixing the overflow issue with the video
         object-fit: cover;
     }
 }

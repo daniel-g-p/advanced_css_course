@@ -1,8 +1,8 @@
 .form {
     &__group:not(:last-child) {
+        // Setting bottom margin on all inputs except the last one
         margin-bottom: 2rem;
     }
-
     &__input {
         font-size: 1.5rem;
         font-family: inherit;
@@ -11,31 +11,27 @@
         border-radius: 2px;
         background-color: rgba($color-white, .5);
         border: none;
+        // Setting the border to avoid a lag upon setting it in hover/focus/active state
         border-bottom: 3px solid transparent;
         width: 90%;
+        // Enabling all box model properties
         display: block;
         transition: all .3s;
-
         @include respond(tab-port) {
             width: 100%;
         }
-
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-primary;
         }
-
         &:focus:invalid {
             border-bottom: 3px solid $color-secondary-dark;
         }
-
         &::-webkit-input-placeholder {
             color: $color-grey-dark-2;
         }
     }
-
-
     &__label {
         font-size: 1.2rem;
         font-weight: 700;
@@ -44,36 +40,33 @@
         display: block;
         transition: all .3s;
     }
-
-    &__input:placeholder-shown + &__label {
+    &__input:placeholder-shown+&__label {
+        // Animating the placeholde upon field input
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
     }
-
-
     &__radio-group {
+        // Aligning the radio options in one group
         width: 49%;
         display: inline-block;
-
         @include respond(tab-port) {
             width: 100%;
             margin-bottom: 2rem;
         }
     }
-
     &__radio-input {
+        // Hiding the actual HTML radio button
         display: none;
     }
-    
     &__radio-label {
         font-size: $default-font-size;
         cursor: pointer;
         position: relative;
         padding-left: 4.5rem;
     }
-
     &__radio-button {
+        // Creating the artificial radio button
         height: 3rem;
         width: 3rem;
         border: 5px solid $color-primary;
@@ -82,8 +75,8 @@
         position: absolute;
         left: 0;
         top: -.4rem;
-
         &::after {
+            // Creating the selected state styles for the radio button
             content: "";
             display: block;
             height: 1.3rem;
@@ -98,8 +91,8 @@
             transition: opacity .2s;
         }
     }
-
-    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    &__radio-input:checked~&__radio-label &__radio-button::after {
+        // Animating the artificial radio button upon selection
         opacity: 1;
     }
 }
